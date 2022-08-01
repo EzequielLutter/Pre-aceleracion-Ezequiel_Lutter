@@ -28,9 +28,11 @@ public class UserDetailsCustomService implements UserDetailsService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
-
+/*
     @Autowired
     private EmailService emailService;
+
+ */
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -56,7 +58,7 @@ public class UserDetailsCustomService implements UserDetailsService {
         userEntity.setUsername(userDTO.getUsername());
         userEntity.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         userEntity = userRepository.save(userEntity);
-        emailService.sendWelcomeEmailTo(userEntity.getUsername());
+       // emailService.sendWelcomeEmailTo(userEntity.getUsername());
         return true;
     }
 

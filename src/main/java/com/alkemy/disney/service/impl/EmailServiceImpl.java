@@ -16,8 +16,8 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 
 @Service
-public class EmailServiceImpl implements EmailService {
-
+public class EmailServiceImpl  {
+/*
     @Autowired
     private Environment env;
 
@@ -50,5 +50,7 @@ public class EmailServiceImpl implements EmailService {
             System.out.println("Error al intentar enviar el correo electrónico");
         }
     }
+
+ */
 
 }
